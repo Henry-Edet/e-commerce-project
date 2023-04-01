@@ -77,10 +77,22 @@ function myAccount(){
 }
 
 // this function is to control the click events of any drop down on the page, making sure anywhere u click it'll turn off any dropdown
-window.addEventListener('click', function(){
-    if (document.querySelector(".drop_down_cart").style.display != "none") {
-        document.querySelector(".drop_down_cart").style.display = "none";
-    } 
+// window.addEventListener('click', function(){
+//     if (document.querySelector(".drop_down_cart").style.display != "none") {
+//         document.querySelector(".drop_down_cart").style.display = "none";
+//     } 
     
-    console.log(document.querySelector(".drop_down_cart"));
-})
+//     console.log(document.querySelector(".drop_down_cart"));
+// })
+var dropdown = document.getElementById('cart_dropping');
+
+dropdown.addEventListener('click', function(event) {
+    dropdown.style.display = 'block';
+    event.stopPropagation();
+});
+
+document.addEventListener('click', function(event) {
+    if (!dropdown.contains(event.target)) {
+    dropdown.style.display = 'none';
+    }
+});
