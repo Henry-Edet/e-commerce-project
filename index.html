@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/lightbox.min.css">
+  
+  <title>E-commerce product page</title>
+
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo"><a href="index.html"><img src="./images/logo.svg" alt="image of the company logo"/></a></div>
+      <div class="nav">
+        <ul class="list_selection">
+          <li><a class="active anchor" href="collections.html">Collections</a></li>
+          <li><a class="anchor" href="men.html">Men</a></li>
+          <li><a class="anchor" href="women.html">Women</a></li>
+          <li><a class="anchor" href="about.html">About</a></li>
+          <li><a class="anchor" href="">Contact</a></li>
+        </ul>
+
+        <!-- right side nav -->
+        <div class="right_nav">
+          <div class="cartt">
+            <img src="./images/icon-cart.svg" id="cart_click" class="cart_img" onclick="clickable()" alt="image of a shopping cart"/>
+            <span id="add_cart_counter">0</span>
+              <!-- drop down menu for cart starts here -->
+              <div id="cart_dropping" class="drop_down_cart">  <!--a div to encapsulate and use the flexbox attributes-->
+                <div class="header_div">       <!--a header div to hold just the writeup for cart-->
+                  Cart
+                </div>
+                <div class="body_div">
+                    <img src="./images/image-product-1-thumbnail.jpg" id="thumbnail_drop_down" alt="image of sneakers">
+                    <div>
+                      <p class="drop_down_writeUp">Fall Limited Edition Sneakers</p>
+                      <p class="drop_down_writeUp">$125.00 x <span id="numberOfItems">3</span><b>$375.00</b></p>
+                    </div>
+                    <img src="./images/icon-delete.svg"  id="trash" alt="image of a trash can">
+                </div>
+                  <button id="checkout">Checkout</button>
+              </div>
+          </div>
+          <div class="img_div">
+            <img src="./images/image-avatar.png" alt="image of user" id="avatar_img" onclick="avatar_click()">
+
+            <!-- AVATAR DROP DOWN STARTS HERE -->
+            <div class="avatar_drop_down">
+              <div class="user_name">
+                <p>Hi! <span id="your_name">HENRY</span></p>
+              </div>
+              <ul class="listing">
+                <li id="accountOpen" onclick="myAccount()"><span><img src="./images/icons8-user-48.png" class="user_img" alt="icon of a user"></span>My Account</li>
+                <li><span><img src="./images/icons8-successful-delivery-100.png" class="user_img" alt=""></span>Orders</li>
+                <li><span><img src="./images/icons8-love-24.png" alt=""></span>Saved Items</li>
+              </ul>
+              <div class="logout">
+                <a href="#"><p>LOGOUT</p></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- hero section begins -->
+
+  <main>
+    <div class="hero_section">
+      <div class="left_hero">
+        <img src="./images/image-product-1.jpg" class="sneake_img" alt="image of a sneaker"/>
+        <div class="small_images">
+          <a href="./images/image-product-1.jpg" data-lightbox="mygallery"><img src="./images/image-product-1-thumbnail.jpg"></a>
+          <a href="./images/image-product-2.jpg" data-lightbox="mygallery"><img src="./images/image-product-2-thumbnail.jpg"></a>
+          <a href="./images/image-product-3.jpg" data-lightbox="mygallery"><img src="./images/image-product-3-thumbnail.jpg"></a>
+          <a href="./images/image-product-4.jpg" data-lightbox="mygallery"><img src="./images/image-product-4-thumbnail.jpg"></a>
+        </div>
+      </div>
+  
+      <div class="right_hero">
+        <span id="sneak">SNEAKER COMPANY</span>
+        <h1>Fall Limited Edition Sneakers</h1>
+        <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
+        <div class="cost">
+          <h2>$125.00 <span>50%</span></h2> 
+          <p id="strike">$250.00</p>
+        </div>
+  
+        <div class="add_cart">
+          <div class="increment-decrement">
+            <div class="flexbox_div">
+              <img src="./images/icon-minus.svg" id="sub" alt="subtraction sign" onclick="decrement()">
+              <h4 id="count_el">0</h4>
+              <img src="./images/icon-plus.svg" id="add" alt="addition sign" onclick="increment()">
+            </div>
+          </div>
+          <button class="cart_btn" id="btn-cart" onclick="addCart()">
+            <img src="./images/icon-cart.svg"  id="cart" alt="cart avatar">
+            Add to cart
+          </button>
+        </div>
+  
+      </div>
+    </div>
+
+    <!-- THIS ENTIRE STRUCTURE HANDLES THE USER ACCOUNT INFORMATION -->
+    <div class="acct_overview">
+      <div class="acct_name">
+        <h4 id="overview">Account Overview</h4>
+        <img src="./images/icon-close.svg" alt="">
+      </div>
+      <div class="acct_body">
+        <div class="acct_left">
+          <div class="acct_left_top">
+            <h4 id="acct_details">ACCOUNT DETAILS</h4>
+            <p id="email_name">
+              Henry Edet<br> 
+              penieledet@icloud.com
+            </p>
+          </div>
+          <div class="acct_left_bottom">
+            <h4 id="credit_section">SNEAKERS STORE CREDIT</h4>
+            <div class="credit_Card_info">
+              <img src="./images/icons8-user-48.png"  id="credit_img" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="acct_right">
+          <div class="acct_right_top">
+            <div class="address_header">
+              <h4 id="address_book">ADDRESS BOOK</h4>
+              <img src="./images/icons8-love-24 (1).png" id="edit_img" alt="">
+            </div>
+            <div class="address_body_top">
+              <address>
+                <h3>Your default shipping address:</h3>
+                <p>Henry Edet</p>
+                <p>near east university, boulevard</p>
+                <p>Nigeria Cyprus</p>
+                <p>+2348165540630</p>
+              </address>
+            </div>
+          </div>
+          <div class="address_body_bottom">
+            <div class="addressBottom_header">
+              <h4 id="newsletter">NEWSLETTER PREFERENCES</h4>
+            </div>
+            <div class="addressBottom_body">
+              <p id="warning">
+                You are currently not subscribed to any of our newsletters.<br>
+                <a href="#" id="edit_news"><p>EDIT NEWSLETTER PREFERENCES</p></a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- THE STRUCTURE ENDS HERE -->
+  </main>
+  
+  <script src="./js/main.js"></script>
+  <script src="./js/lightbox-plus-jquery.min.js"></script>
+</body>
+</html>
