@@ -241,6 +241,9 @@ h2{
     width: 40%;
     border-radius: 6px;
 }
+.flex{
+    display: flex !important;
+}
 
 .flexbox_div{
     display: flex;
