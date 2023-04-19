@@ -27,56 +27,35 @@ function decrement() {
 
 
 // js to control the dropdown of the cart 
-// const body = document.querySelector("body");
 let offCart = document.getElementById("cart_click");
 let dropCart = document.querySelector(".drop_down_cart");
-let click = 0
 
 function clickable() {
-    console.log(dropCart.classList)
     dropCart.classList.toggle('flex');
-    // if (click === 1) {
-    //     dropCart.style.display = "flex";
-    //     click = 0
-    // } else {
-    //     dropCart.style.display = "none";
-    //     click = 1
-    // }
 }
 
 
 // avatar image drop down
-
 let offAvatar = document.getElementById("avatar_img");
 let logDrop = document.querySelector(".avatar_drop_down");
 
-let change = 0
-
 function avatar_click() {
-    if (change === 1) {
-        logDrop.style.display = "flex";
-        change = 0
-    } else {
-        logDrop.style.display = "none";
-        change = 1
-    }
+    logDrop.classList.toggle('flex');
 }
 
 // this open the my account dropdown inside the avatar dropdown
 let offAccount = document.getElementById('accountOpen');
-let overView = document.querySelector(".acct_overview");
+let overView = document.querySelector(".acctOverview");
 
-let constant = 0
+let constant = 1
 
 function myAccount() {
     if (constant === 1) {
         overView.style.display = "block";
-        constant = 0
-    } else {
-        overView.style.display = "none";
-        constant = 1
-    }
+    } 
 }
+
+
 
 // this function is to control the click events of any drop down on the page, making sure anywhere u click it'll turn off any dropdown
 window.addEventListener('click', function (e) {
@@ -84,5 +63,18 @@ window.addEventListener('click', function (e) {
     if (eventTarget != 'cart_click') {
         dropCart.classList.remove('flex')
     }
+    if (eventTarget != 'avatar_img') {
+        logDrop.classList.remove('flex')
+    }
 })
 
+
+closeButton.addEventListener('click', function() {
+    overView.style.display = 'none';
+})
+
+// 
+const image = document.getElementById("my-image");
+image.addEventListener("click", function() {
+    image.classList.toggle("scale");
+});
