@@ -72,7 +72,22 @@
   <main>
     <div class="hero_section">
       <div class="left_hero">
-          <img src="./images/image-product-1.jpg" id="my-image" class="sneake_img" alt="image of a sneaker" loading="lazy"/>
+        <div class="sliderContainer" id="imgContainer">
+          <div class="showSlide fade">
+            <img src="./images/image-product-1.jpg" id="my-image" class="sneake_img" alt="image of a sneaker" loading="lazy"/>
+          </div>
+          <div class="showSlide fade">
+            <img src="./images/image-product-2.jpg" alt="" id="my-image1">
+          </div>
+          <div class="showSlide fade">
+            <img src="./images/image-product-3.jpg" alt="" id="my-image2">
+          </div>
+          <div class="showSlide fade">
+            <img src="./images/image-product-4.jpg" alt="" id="my-image3">
+          </div>
+          <a class="left" onclick="nextSlide(-1)">&larr;</a>
+          <a class="right" onclick="nextSlide(1)">&rarr;</a>
+        </div>
         <div class="small_images">
           <a href="./images/image-product-1.jpg" data-lightbox="mygallery"><img src="./images/image-product-1-thumbnail.jpg"></a>
           <a href="./images/image-product-2.jpg" data-lightbox="mygallery"><img src="./images/image-product-2-thumbnail.jpg"></a>
