@@ -121,3 +121,10 @@ function displaySlides(n) {
 window.setInterval(function() {
     nextSlide(1);
 }, 6000);
+
+
+// logout button
+const logoutButton = document.getElementById('logoutButton');
+logoutButton.addEventListener('click', ()=> {
+    window.location.href = '../pages/LoginPage.html';
+})

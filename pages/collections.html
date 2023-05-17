@@ -5,27 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
 
     <title>Collections</title>
 </head>
 <body>
     <header>
         <div class="container">
-            <div class="logo"><a href="index.html"><img src="./images/logo.svg" alt="image of the company logo"/></a></div>
+            <div class="logo"><a href="../index.html"><img src="../images/logo.svg" alt="image of the company logo"/></a></div>
             <div class="nav">
                 <ul class="list_selection">
                     <li><a class="active anchor" href="collections.html">Collections</a></li>
                     <li><a class="anchor" href="men.html">Men</a></li>
                     <li><a class="anchor" href="women.html">Women</a></li>
                     <li><a class="anchor" href="about.html">About</a></li>
-                    <li><a class="anchor" href="">Contact</a></li>
+                    <li><a class="anchor" href="#footer">Contact</a></li>
                 </ul>
 
                 <!-- right side nav -->
                 <div class="right_nav">
                     <div class="cartt">
-                        <img src="./images/icon-cart.svg" id="cart_click" class="cart_img" onclick="clickable()" alt="image of a shopping cart"/>
+                        <img src="../images/icon-cart.svg" id="cart_click" class="cart_img" onclick="clickable()" alt="image of a shopping cart"/>
                         <span id="add_cart_counter">0</span>
                             <!-- drop down menu for cart starts here -->
                             <div id="cart_dropping" class="drop_down_cart">  <!--a div to encapsulate and use the flexbox attributes-->
@@ -33,18 +33,18 @@
                                     Cart
                                 </div>
                                 <div class="body_div">
-                                    <img src="./images/image-product-1-thumbnail.jpg" id="thumbnail_drop_down" alt="image of sneakers">
+                                    <img src="../images/image-product-1-thumbnail.jpg" id="thumbnail_drop_down" alt="image of sneakers">
                                     <div>
                                         <p class="drop_down_writeUp">Fall Limited Edition Sneakers</p>
                                         <p class="drop_down_writeUp">$125.00 x <span id="numberOfItems">3</span><b>$375.00</b></p>
                                     </div>
-                                    <img src="./images/icon-delete.svg"  id="trash" alt="image of a trash can">
+                                    <img src="../images/icon-delete.svg"  id="trash" alt="image of a trash can">
                                 </div>
                                 <button id="checkout">Checkout</button>
                             </div>
                     </div>
                     <div class="img_div">
-                        <img src="./images/image-avatar.png" alt="image of user" id="avatar_img" onclick="avatar_click()">
+                        <img src="../images/image-avatar.png" alt="image of user" id="avatar_img" onclick="avatar_click()">
 
                         <!-- AVATAR DROP DOWN STARTS HERE -->
                         <div class="avatar_drop_down">
@@ -52,12 +52,12 @@
                                 <p>Hi! <span id="your_name">HENRY</span></p>
                             </div>
                             <ul class="listing">
-                                <li id="accountOpen" onclick="myAccount()"><span><img src="./images/icons8-user-48.png" class="user_img" alt="icon of a user"></span>My Account</li>
-                                <li><span><img src="./images/icons8-successful-delivery-100.png" class="user_img" alt=""></span>Orders</li>
-                                <li><span><img src="./images/icons8-love-24.png" alt=""></span>Saved Items</li>
+                                <li id="accountOpen" onclick="myAccount()"><span><img src="../images/icons8-user-48.png" class="user_img" alt="icon of a user"></span>My Account</li>
+                                <li><span><img src="../images/icons8-successful-delivery-100.png" class="user_img" alt=""></span>Orders</li>
+                                <li><span><img src="../images/icons8-love-24.png" alt=""></span>Saved Items</li>
                             </ul>
                             <div class="logout">
-                                <a href="#"><p>LOGOUT</p></a>
+                                <button id="logoutButton">LogOut</button>
                             </div>
                         </div>
                     </div>
@@ -65,6 +65,212 @@
             </div>
         </div>
     </header>
-    <script src="./js/collection.js"></script>
+
+    <main>
+        <div class="mainHero">
+            <!-- latest drops section -->
+            <div class="latestDrop">
+                <div class="latestDropIcon">
+                    <span id="lateDrop">LATEST DROPS</span>
+                </div>
+                <div class="thumbPhotos">
+                    <div class="firstImg">
+                        <img src="../images/latest1.jpeg" class="lastestThumb" id="firImg" width="50%" height="50%" alt="">
+                        <p class="NamePrice">Retro All Star<br>
+                            From $449.99
+                        </p>
+                    </div>
+                    <div class="secImg">
+                        <img src="../images/latest2.jpeg" class="lastestThumb" id="sekImg" width="50%" height="50%" alt="">
+                        <p class="NamePrice">Retro Air Jordans<br>
+                            From $749.99
+                        </p>
+                    </div>
+                    <div class="thirdImg">
+                        <img src="../images/latest3.jpeg" class="lastestThumb" id="thdImg" width="50%" height="50%" alt="">
+                        <p class="NamePrice">Retro Adidas<br>
+                            From $549.99
+                        </p>
+                    </div>
+                    <div class="fourthImg">
+                        <img src="../images/latest4.jpeg" class="lastestThumb" id="frthImg" width="48%" height="50%" alt="">
+                        <p class="NamePrice">Retro Nike<br>
+                            From $449.99
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- different sections -->
+            <div class="allSections">
+                <!-- jordan section -->
+                <div class="jordanHead">
+                    <div id="jordans">
+                        <span id="listOfJordans">
+                            JORDANS
+                        </span>
+                    </div>
+                    <div class="jordanSliderContainer">
+                        <div class="jordanSlides">
+                            <div class="Slider fade">
+                                <a href="#"><img src="../images/jordan6.jpg" width="50%" height="100%" alt="" id="jordanimg"></a>
+                            </div>
+                            <div class="Slider fade">
+                                <a href="#"><img src="../images/jordan4.jpg" width="50%" height="100%" alt="" id="jordanimg"></a>
+                            </div>
+                        </div>
+                        <div class="backgroundDiv">
+                            <p id="jordanName">
+                                Authenticity. 100% Guaranteed. <br>
+                                <span class="airJordan">Air Jordan</span>
+                            </p>
+                        </div>
+                        <a class="lefty" onclick="nextSlide(-1)">&larr;</a>
+                        <a class="righty" onclick="nextSlide(1)">&rarr;</a>
+                    </div>
+                </div>
+    
+                <!--Nike section-->
+                <div class="nikeHead">
+                    <div id="nikes">
+                        <span id="listOfnikes">
+                            NIKE
+                        </span>
+                    </div>
+                    <div class="nikeSliderContainer">
+                        <div class="nikeSlides">
+                            <div class="Sliding fade">
+                                <a href="#"><img src="../images/nike6.jpg" width="60%" height="100%" alt="" id="Nikeimg"></a>
+                            </div>
+                            <div class="Sliding fade">
+                                <a href="#"><img src="../images/nike5.jpg" width="60%" height="100%" alt="" id="Nikeimg"></a>
+                            </div>
+                        </div>
+                        <div class="backgroundDiv">
+                            <p id="nikeName">
+                                Authenticity. 100% Guaranteed. <br>
+                                <span class="NIKE">Nike</span>
+                            </p>
+                        </div>
+                        <a class="Golefty" onclick="NextSlide(-1)">&larr;</a>
+                        <a class="Gorighty" onclick="NextSlide(1)">&rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <footer id="footer">
+            <div class="footerLeft">
+                <div class="footerMenu">
+                    <h1 class="fMenuTitle">About Us</h1>
+                    <ul class="fList">
+                        <li class="fListItem">Company</li>
+                        <li class="fListItem">Careers</li>
+                        <li class="fListItem">Affiliates</li>
+                        <li class="fListItem">Stores</li>
+                    </ul>
+                </div>
+                <div class="footerMenu">
+                    <h1 class="fMenuTitle">Useful Links</h1>
+                    <ul class="fList">
+                        <li class="fListItem">Support</li>
+                        <li class="fListItem">Refund</li>
+                        <li class="fListItem">FAQ</li>
+                        <li class="fListItem">Feedback</li>
+                        <li class="fListItem">Stories</li>
+                    </ul>
+                </div>
+                <div class="footerMenu">
+                    <h1 class="fMenuTitle">Products</h1>
+                    <ul class="fList">
+                        <li class="fListItem">Air Force</li>
+                        <li class="fListItem">Air Jordan</li>
+                        <li class="fListItem">Blazer</li>
+                        <li class="fListItem">Crater</li>
+                        <li class="fListItem">Hippie</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footerRight">
+                <div class="footerRightMenu">
+                    <h1 class="fMenuTitle">Subscribe to our newsletter</h1>
+                    <p id="mersin10">Contact Us : +909387654345, Ortakoy, MERSIN 10, Turkey</p>
+                    <div class="fMail">
+                        <input type="text" placeholder="your@email.com" class="fInput">
+                        <button class="fButton">Join!</button>
+                    </div>
+                </div>
+                <div class="footerRightMenu">
+                    <h1 class="fMenuTitle">Follow Us</h1>
+                    <div class="fIcons">
+                        <img src="../images/facebookIcon.png" alt="" class="fIcon">
+                        <img src="../images/twitter.png" alt="" class="fIcon">
+                        <img src="../images/linkedIn.svg" alt="" class="fIcon">
+                        <img src="../images/whatsapp.png" alt="" class="fIcon">
+                        <img src="../images/IG.svg" alt="" class="fIcon">
+                    </div>
+                </div>
+                <div class="footerRightMenu">
+                    <span class="copyright">All rights reserved. 2022.</span>
+                </div>
+            </div>
+        </footer>
+
+        <!-- THIS ENTIRE STRUCTURE HANDLES THE USER ACCOUNT INFORMATION -->
+        <div class="acctOverview">
+            <div class="acct_name">
+                <h4 id="overview">Account Overview</h4>
+                <img src="../images/icon-close.svg" alt="" id="closeButton" class="closeUp">
+            </div>
+            <div class="acct_body">
+                <div class="acct_left">
+                    <div class="acct_left_top">
+                        <h4 id="acct_details">ACCOUNT DETAILS</h4>
+                        <p id="email_name">
+                            Henry Edet<br> 
+                            penieledet@icloud.com
+                        </p>
+                    </div>
+                    <div class="acct_left_bottom">
+                        <h4 id="credit_section">SNEAKERS STORE CREDIT</h4>
+                        <div class="credit_Card_info">
+                            <img src="../images/icons8-user-48.png"  id="credit_img" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="acct_right">
+                    <div class="acct_right_top">
+                        <div class="address_header">
+                            <h4 id="address_book">ADDRESS BOOK</h4>
+                            <img src="../images/icons8-love-24 (1).png" id="edit_img" alt="">
+                        </div>
+                        <div class="address_body_top">
+                            <address>
+                                <h3>Your default shipping address:</h3>
+                                <p>Henry Edet</p>
+                                <p>near east university, boulevard</p>
+                                <p>Nigeria Cyprus</p>
+                                <p>+2348165540630</p>
+                            </address>
+                        </div>
+                    </div>
+                    <div class="address_body_bottom">
+                        <div class="addressBottom_header">
+                            <h4 id="newsletter">NEWSLETTER PREFERENCES</h4>
+                        </div>
+                        <div class="addressBottom_body">
+                            <p id="warning">
+                                You are currently not subscribed to any of our newsletters.<br>
+                                <a href="#" id="edit_news"><p>EDIT NEWSLETTER PREFERENCES</p></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- THE STRUCTURE ENDS HERE -->
+    </main>
+    <script src="../js/collection.js"></script>
 </body>
 </html>

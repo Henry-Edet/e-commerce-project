@@ -44,3 +44,65 @@ window.addEventListener('click', function (e) {
 closeButton.addEventListener('click', function() {
     overView.style.display = 'none';
 })
+
+// for slide show
+var slide_index = 1;
+displaySlides(slide_index);
+
+function nextSlide(n) {
+    displaySlides(slide_index += n);
+}
+
+function currentSlide(n) {
+    displaySlides(slide_index = n);
+}
+
+function displaySlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("Slider");
+    if (n > slides.length) {slide_index = 1}
+    if (n < 1) {slide_index = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slide_index - 1].style.display = "block";
+}
+
+// auto play of images
+window.setInterval(function() {
+    nextSlide(1);
+}, 6000);
+
+
+var slide_index = 1;
+DisplaySlides(slide_index);
+
+function NextSlide(n) {
+    DisplaySlides(slide_index += n);
+}
+
+function currentSlide(n) {
+    DisplaySlides(slide_index = n);
+}
+
+function DisplaySlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("Sliding");
+    if (n > slides.length) {slide_index = 1}
+    if (n < 1) {slide_index = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slide_index - 1].style.display = "block";
+}
+
+// auto play of images
+window.setInterval(function() {
+    NextSlide(1);
+}, 6000);
+
+// logout button
+const logoutButton = document.getElementById('logoutButton');
+logoutButton.addEventListener('click', ()=> {
+    window.location.href = '../pages/LoginPage.html';
+})
