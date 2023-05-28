@@ -44,3 +44,9 @@ window.addEventListener('click', function (e) {
 closeButton.addEventListener('click', function() {
     overView.style.display = 'none';
 })
+
+// 
+const logoutButton = document.getElementById('logoutButton');
+logoutButton.addEventListener('click', ()=> {
+    window.location.href = '../pages/LoginPage.html';
+})

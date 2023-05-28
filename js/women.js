@@ -66,3 +66,10 @@ const timer = setInterval(()=> {
     shoeWriteup.innerHTML = `${writeUps[counter][1]}`
     counter += 1
 }, 10000)
+
+
+// 
+const logoutButton = document.getElementById('logoutButton');
+logoutButton.addEventListener('click', ()=> {
+    window.location.href = '../pages/LoginPage.html';
+})

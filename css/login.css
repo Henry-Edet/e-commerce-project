@@ -138,6 +138,7 @@ a {
     padding: 2px;
 }
 
+
 h1 {
     position: absolute;
     top: 0;
@@ -145,8 +146,13 @@ h1 {
 }
 
 #signUp{
+    display: flex;
+    position: relative;
+    background: none;
     cursor: pointer;
     font-weight: 300;
     transition: 0.5s;
     margin-left: 108px;
+    font-size: medium;
+    top: 4px;
 }
