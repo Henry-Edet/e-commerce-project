@@ -4,7 +4,7 @@
 
 # Welcome!!
 
-this project was inspired from frontendmentor.io
+This project was inspired from frontendmentor.io
 
 
 
